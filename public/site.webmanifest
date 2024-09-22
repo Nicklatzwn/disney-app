@@ -1,0 +1,14 @@
+{
+  "name": "Power Factors",
+  "short_name": "Power Factors",
+  "description": "Power Factors Disney App",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
