@@ -10,13 +10,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+### `npm run dev`
+
+Open the app directly on the browser and runs it on a development mode.<br />
+
 ### `npm run lint`
 
 Checks the code for errors and missing things
 
 ### `npm run format`
 
-Formats the code according to `./prettierrc.js` config
+Formats the code according to `prettier` config
 
 ### `npm test`
 

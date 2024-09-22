@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "vite",
+    "dev": "vite --open",
     "preview": "vite preview",
     "build": "tsc --noEmit && vite build",
     "format": "prettier ./src --write",
