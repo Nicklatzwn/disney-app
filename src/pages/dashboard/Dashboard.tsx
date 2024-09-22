@@ -5,7 +5,7 @@ import { FunctionComponent, useState } from 'react';
 import { CharacterDetails } from '@/components/characterDetails';
 import FilmsParticipation from '@/components/filmsParticipation/FilmsParticipation';
 import { useSelector } from 'react-redux';
-import { isCharactersLoading } from '@/store/characters';
+import { getCharacters, isCharactersLoading } from '@/store/characters';
 
 /**
  * Dashboard Component
@@ -21,6 +21,8 @@ const Dashboard: FunctionComponent = (): JSX.Element => {
   const [openStatistics, setOpenStatistics] = useState<boolean>(false);
   const toggleStatistics = () => setOpenStatistics(!openStatistics);
   const charactersLoading = useSelector(isCharactersLoading);
+  const characters = useSelector(getCharacters);
+  const disabled = charactersLoading || !characters.length;
 
   return (
     <Stack padding={2}>
@@ -30,7 +32,7 @@ const Dashboard: FunctionComponent = (): JSX.Element => {
           action={
             <Tooltip title="Films participation per page">
               <span>
-                <IconButton onClick={toggleStatistics} disabled={charactersLoading}>
+                <IconButton onClick={toggleStatistics} disabled={disabled}>
                   <BarChartIcon />
                 </IconButton>
               </span>

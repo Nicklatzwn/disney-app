@@ -48,7 +48,7 @@ const CharacterDetails: FunctionComponent = (): JSX.Element => {
         sx={(theme) => ({
           position: 'absolute',
           right: 7,
-          top: 13,
+          top: 12,
           color: theme.palette.grey[500],
         })}
       >
