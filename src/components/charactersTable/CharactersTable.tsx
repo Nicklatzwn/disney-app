@@ -94,24 +94,24 @@ const CharactersTable: FunctionComponent = (): JSX.Element => {
             <Table stickyHeader>
               <TableHead>
                 <TableRow>
-                  <TableCell width="25%" align="center">
+                  <TableCell width="35%" align="center">
                     <TableSortLabel sx={{ ml: 3 }} active direction={order} onClick={handleSort}>
                       Name
                     </TableSortLabel>
                   </TableCell>
-                  <TableCell width="15%" align="center">
+                  <TableCell width="10%" align="center">
                     TV Shows
                   </TableCell>
-                  <TableCell width="15%" align="center">
+                  <TableCell width="10%" align="center">
                     Video Games
                   </TableCell>
-                  <TableCell width="15%" align="center">
+                  <TableCell width="20%" align="center">
                     Allies
                   </TableCell>
-                  <TableCell width="15%" align="center">
+                  <TableCell width="20%" align="center">
                     Enemies
                   </TableCell>
-                  <StyledActionTableCell width="15%" align="center">
+                  <StyledActionTableCell width="5%" align="center">
                     Details
                   </StyledActionTableCell>
                 </TableRow>
@@ -119,22 +119,22 @@ const CharactersTable: FunctionComponent = (): JSX.Element => {
               <TableBody>
                 {sortedCharacters.map((row) => (
                   <StyledTableBodyRow key={row._id}>
-                    <TableCell width="25%" align="center">
+                    <TableCell width="35%" align="center">
                       {row.name}
                     </TableCell>
-                    <TableCell width="15%" align="center">
+                    <TableCell width="10%" align="center">
                       {row.tvShows.length}
                     </TableCell>
-                    <TableCell width="15%" align="center">
+                    <TableCell width="10%" align="center">
                       {row.videoGames.length}
                     </TableCell>
-                    <TableCell width="15%" align="center">
-                      {row.allies.length}
+                    <TableCell width="20%" align="center">
+                      {row.allies.length ? row.allies.join(', ') : '-'}
                     </TableCell>
-                    <TableCell width="15%" align="center">
-                      {row.enemies.length}
+                    <TableCell width="20%" align="center">
+                      {row.enemies.length ? row.enemies.join(', ') : '-'}
                     </TableCell>
-                    <StyledActionTableCell width="15%" align="center">
+                    <StyledActionTableCell width="5%" align="center">
                       <Tooltip title={`View details of character ${row.name}`}>
                         <IconButton children={<OpenInFullIcon />} onClick={() => onSetId(row._id)} />
                       </Tooltip>

@@ -98,7 +98,9 @@ const FilmsParticipation: FunctionComponent<IProps> = (props: IProps): JSX.Eleme
         bookType: 'xlsx',
         type: 'array',
       });
-      const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
+      const blob = new Blob([excelBuffer], {
+        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      });
       saveAs(blob, `Films Participation - Page ${page}.xlsx`);
     }
   };

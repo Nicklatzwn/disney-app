@@ -2,8 +2,14 @@ import { TableCell, TableRow } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 export const StyledTableBodyRow = styled(TableRow)(({ theme }) => ({
+  '> td:last-child': {
+    backgroundColor: theme.palette.background.default,
+  },
   '&:nth-of-type(odd)': {
-    backgroundColor: theme.palette.action.hover,
+    backgroundColor: theme.palette.mode === 'light' ? theme.palette.grey[100] : theme.palette.grey[900],
+    '> td:last-child': {
+      backgroundColor: theme.palette.mode === 'light' ? theme.palette.grey[100] : theme.palette.grey[900],
+    },
   },
 }));
 
