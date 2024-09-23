@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, IconButton, Stack, Tooltip } from '@mui/
 import BarChartIcon from '@mui/icons-material/BarChart';
 import { FunctionComponent, useState } from 'react';
 import { CharacterDetails } from '@/components/characterDetails';
-import FilmsParticipation from '@/components/filmsParticipation/FilmsParticipation';
+import { FilmsParticipation } from '@/components/filmsParticipation';
 import { useSelector } from 'react-redux';
 import { getCharacters, isCharactersLoading } from '@/store/characters';
 

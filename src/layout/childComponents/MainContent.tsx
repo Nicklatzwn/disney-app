@@ -1,4 +1,4 @@
-import ErrorBoundary from '@/components/errorBoundary/ErrorBoundary';
+import { ErrorBoundary } from '@/components/errorBoundary';
 import { Stack } from '@mui/material';
 import { FunctionComponent, ReactNode } from 'react';
 
