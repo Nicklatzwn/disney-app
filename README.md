@@ -22,9 +22,13 @@ Checks the code for errors and missing things
 
 Formats the code according to `prettier` config
 
-### `npm test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.<br />
+
+### `npm run coverage`
+
+Runs all the tests and generate the coverage report.<br />
 
 ### `npm run build`
 

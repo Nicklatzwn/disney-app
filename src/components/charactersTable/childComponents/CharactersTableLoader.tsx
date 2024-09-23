@@ -25,7 +25,15 @@ const CharactersTableLoader: FunctionComponent<IProps> = (props: IProps): JSX.El
   return (
     <>
       {isLoading && (
-        <Box position="absolute" display="flex" justifyContent="center" alignItems="center" height="100%" width="100%">
+        <Box
+          data-testid="characters-table-loader"
+          position="absolute"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          height="100%"
+          width="100%"
+        >
           <CircularProgress />
         </Box>
       )}

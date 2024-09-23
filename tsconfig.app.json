@@ -27,7 +27,7 @@
     },
 
     /* Type checking */
-    "types": ["node", "@testing-library/jest-dom"]
+    "types": ["node", "@testing-library/jest-dom", "vitest/globals"]
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

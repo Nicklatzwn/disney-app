@@ -1,7 +1,7 @@
-import { CharactersTable } from '@/components/charactersTable';
 import { Card, CardContent, CardHeader, IconButton, Stack, Tooltip } from '@mui/material';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import { FunctionComponent, useState } from 'react';
+import { CharactersTable } from '@/components/charactersTable';
 import { CharacterDetails } from '@/components/characterDetails';
 import { FilmsParticipation } from '@/components/filmsParticipation';
 import { useSelector } from 'react-redux';
@@ -32,7 +32,7 @@ const Dashboard: FunctionComponent = (): JSX.Element => {
           action={
             <Tooltip title="Films participation per page">
               <span>
-                <IconButton onClick={toggleStatistics} disabled={disabled}>
+                <IconButton data-testid="pie-chart-films-participation" onClick={toggleStatistics} disabled={disabled}>
                   <BarChartIcon />
                 </IconButton>
               </span>

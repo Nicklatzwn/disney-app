@@ -15,7 +15,8 @@
     "format": "prettier ./src --write",
     "lint": "eslint .",
     "type": "tsc --noEmit",
-    "test": "npm run vitest"
+    "test": "vitest --standalone",
+    "coverage": "vitest --coverage"
   },
   "dependencies": {
     "@emotion/react": "latest",
@@ -44,18 +45,22 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/react-router-dom": "latest",
+    "@types/redux-mock-store": "^1.0.6",
     "@vitejs/plugin-react-swc": "latest",
+    "@vitest/coverage-v8": "^2.1.1",
     "eslint": "latest",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "latest",
     "globals": "latest",
     "jsdom": "latest",
+    "msw": "^2.4.9",
     "prettier": "latest",
+    "redux-mock-store": "^1.5.4",
     "ts-node": "latest",
     "typescript": "^5",
     "typescript-eslint": "^7.2.0",
     "vite": "^5",
     "vite-tsconfig-paths": "latest",
-    "vitest": "latest"
+    "vitest": "^2.1.1"
   }
 }

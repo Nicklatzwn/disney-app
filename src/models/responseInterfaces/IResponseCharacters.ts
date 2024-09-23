@@ -16,7 +16,7 @@ export interface IResponseCharactersData {
   enemies: string[];
   sourceUrl: string;
   name: string;
-  imageUrl: string;
+  imageUrl?: string;
   createdAt: string;
   updatedAt: string;
   url: string;

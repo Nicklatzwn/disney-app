@@ -1,25 +1,37 @@
-import { defineConfig } from 'vitest/config';
+import { defineConfig, coverageConfigDefaults } from 'vitest/config';
 import react from '@vitejs/plugin-react-swc';
 import tsConfigPaths from 'vite-tsconfig-paths';
+import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: {
-    outDir: 'dist',
-  },
   plugins: [react(), tsConfigPaths()],
   server: {
-    open: true,
     port: 3000,
-    host: true,
+    host: '0.0.0.0',
+    strictPort: true,
+    watch: {
+      usePolling: true,
+    },
+  },
+  preview: {
+    port: 3001,
+    host: '0.0.0.0',
+    strictPort: true,
   },
   test: {
+    dir: 'src',
     alias: {
-      '@/': new URL('./src/', import.meta.url).pathname,
+      '@/': resolve(__dirname, 'src/'),
     },
     environment: 'jsdom',
     include: ['**/*.test.*', '**/*.spec.*'],
     globals: true,
-    setupFiles: ['./setup-tests.ts'],
+    setupFiles: ['./src/setup-tests.ts'],
+    coverage: {
+      all: false,
+      exclude: [...coverageConfigDefaults.exclude],
+    },
+    logHeapUsage: true,
   },
 });

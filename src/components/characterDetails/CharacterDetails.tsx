@@ -62,7 +62,7 @@ const CharacterDetails: FunctionComponent = (): JSX.Element => {
               {character.name}
             </Typography>
             <Typography variant="body2" color="textSecondary">
-              <Link href={character.sourceUrl} variant="body2" target="_blank">
+              <Link data-testid="character-link" href={character.sourceUrl} variant="body2" target="_blank">
                 {character.sourceUrl}
               </Link>
             </Typography>
