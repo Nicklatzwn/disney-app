@@ -145,7 +145,7 @@ const CharactersTable: FunctionComponent = (): JSX.Element => {
               <TableFooter
                 sx={{
                   position: 'sticky',
-                  bottom: 0,
+                  bottom: -1,
                   backgroundColor: theme.palette.background.default,
                   zIndex: 1,
                 }}
